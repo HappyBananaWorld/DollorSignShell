@@ -6,6 +6,7 @@ import pyperclip
 from commands.cat.cat import cat
 from commands.getip.ip import ipv4, ipv6, ip
 from commands.random.random import random_int,random_handle
+from commands.search.search import search
 
 class DollorSign:
     def __init__(self) -> None:
@@ -54,6 +55,8 @@ class DollorSign:
         
         if self.command == "random":
             return_data = random_handle(self.values)
+        if self.command == "search":
+            search(self.values[0])
 
         if self.isCopy:
             pyperclip.copy(str(return_data))
