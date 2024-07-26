@@ -3,6 +3,7 @@
 import sys
 from commands.cat.cat import cat
 from commands.getip.ip import ipv4, ipv6, ip
+from commands.random.random import random_int,random_handle
 
 class DollorSign:
     def __init__(self) -> None:
@@ -38,7 +39,9 @@ class DollorSign:
         
         if self.command == "ip":
             return ip()
-            
+        
+        if self.command == "random":
+            random_handle(self.values)
         
 
 if __name__ == "__main__":
