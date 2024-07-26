@@ -1,3 +1,6 @@
 def cat(filename):
+    result = None
     with open(filename,'r') as file:
-        print(file.read())
+        result = file.read()
+        print(result)
+        return result

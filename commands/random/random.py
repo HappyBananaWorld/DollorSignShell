@@ -39,13 +39,17 @@ def random_str(args):
 
 def random_handle(args):
     try:
+        result = None
         type = args[0]    
 
         if type == "int":
-            return print(random_int(args))
+            result = random_int(args)
         if type == "float":
-            return print(float(random_int(args)))
+            result = float(random_int(args))
         if type == "string":
-            return print(random_str(args))
+            result = random_str(args)
+
+        print(result)
+        return result
     except ValueError:
         print("you are calling wrong command. pls type '$ random help' to show helper")
